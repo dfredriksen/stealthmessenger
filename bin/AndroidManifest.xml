@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.ninjitsuware.notepad"
+      android:versionCode="300"
+      android:versionName="3.0.0" >
+      
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="13" />
+	<permission android:name="android.permission.WRITE_SMS" />
+	<permission android:name="android.permission.READ_SMS" />
+	<permission android:name="android.permission.RECEIVE_SMS" />
+	<permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<permission android:name="android.permission.READ_CONTACTS" />
+	<permission android:name="android.permission.SEND_SMS" />
+	<permission android:name="android.permission.SEND_MMS" />
+	<permission android:name="android.permission.VIBRATE" />
+	<permission android:name="android.permission.ACCESS_NETWORK_STATE" />	
+	<permission android:name="android.permission.INTERNET"/>
+	
+    <!-- Required permission to check licensing. -->
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />	
+
+	<uses-permission android:name="android.permission.WRITE_SMS" />
+	<uses-permission android:name="android.permission.WRITE_MMS" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.READ_SMS" />
+	<uses-permission android:name="android.permission.READ_MMS" />
+	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+	<uses-permission android:name="android.permission.RECEIVE_MMS" />
+	<uses-permission android:name="android.permission.SEND_SMS" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />	
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+  	<uses-permission android:name="android.permission.INTERNET"/>  	
+  	
+    <application android:icon="@drawable/logo"      
+    			 android:label="@string/app_name">
+    			 		
+
+       	<activity android:name="com.ninjitsuware.notepad.StealthMessengerActivity"
+                  android:label="@string/app_name">                         
+        </activity>
+          
+		<activity android:name="com.ninjitsuware.notepad.NoteEdit"
+                  android:label="@string/app_name">                         
+        </activity>       	
+       	
+       	<activity android:name="com.ninjitsuware.notepad.Notepadv3" android:label="@string/app_name" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />					
+			</intent-filter>                             	    
+       	</activity>
+       	<activity android:name="com.ninjitsuware.notepad.StealthMessengerAccountActivity"
+                  android:label="@string/app_name">           
+                  <intent-filter>
+                  	<action android:name="com.ninjitsuware.notepad.NEW_MESSAGE" />                  
+					<action android:name="com.ninjitsuware.notepad.SEND_MESSAGE" />                  
+                  </intent-filter>
+        </activity>                
+       	<activity android:name="com.ninjitsuware.notepad.StealthMessengerKeypad"
+                  android:label="@string/app_name">           
+        </activity>        
+       	<activity android:name="com.ninjitsuware.notepad.StealthMessengerPanicActivity"
+                  android:label="@string/app_name">                  
+        </activity>
+        <activity android:name="com.ninjitsuware.notepad.StealthPanicPreferencesActivity"
+                  android:label="@string/app_name">                  
+        </activity>        
+       	<activity android:name="com.ninjitsuware.notepad.StealthMainActivity"
+                  android:label="@string/app_name">				
+        </activity>
+       	<activity android:name="com.ninjitsuware.notepad.StealthSettingsActivity"
+                  android:label="@string/app_name">           
+        </activity>
+       	<activity android:name="com.ninjitsuware.notepad.StealthPreferencesActivity"
+                  android:label="@string/app_name">           
+        </activity>        
+       	<activity android:name="com.ninjitsuware.notepad.StealthMessengerAccounts"
+                  android:label="@string/app_name">           
+        </activity>               	
+  
+		<activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />    
+
+        <receiver android:name="com.ninjitsuware.notepad.SmsReceiver" android:exported="true" 
+        	android:permission="android.permission.RECEIVE_BOOT_COMPLETED"> 
+			<intent-filter android:priority="999" >			 			
+				<action android:name="android.provider.Telephony.SMS_RECEIVED" />
+				<action android:name="android.intent.action.BOOT_COMPLETED" />               	
+	        </intent-filter> 
+		</receiver>
+		
+		<provider android:name="com.stacservices.stealthmessenger.providers.SSMSProvider"
+          android:authorities="com.stacservices.stealthmessenger.providers.SSMSProvider" />          	
+
+		<provider android:name="com.stacservices.stealthmessenger.providers.SSMSAccountProvider"
+          android:authorities="com.stacservices.stealthmessenger.providers.SSMSAccountProvider" />
+	
+    </application>
+    
+</manifest>

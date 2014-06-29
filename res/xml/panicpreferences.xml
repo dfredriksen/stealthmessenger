@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+        
+    <PreferenceCategory 
+        android:title="Settings"
+        android:key="first_category">
+        
+        <CheckBoxPreference 
+            android:key="virus_on"
+            android:summary="Automatically Scan for Viruses"
+            android:title="Virus Scanner" 
+            android:defaultValue="true"
+        />
+                
+    
+        <CheckBoxPreference 
+            android:key="firewall_on"
+            android:summary="Turn on Firewall Protection"
+            android:title="Firewall Protection" 
+            android:defaultValue="true"
+        />
+        
+        <CheckBoxPreference 
+            android:key="text_on"
+            android:summary="Auto scan text messages for malicious software"
+            android:title="Text Message Scanner" 
+            android:defaultValue="true"
+        />
+            
+        <EditTextPreference
+            android:key="Panic_PIN"
+            android:title="Security PIN"
+            android:summary="PIN to lock application"
+            android:dialogTitle="Security PIN"
+            android:dialogMessage="Provide a numerical password."
+            android:inputType="number"              
+            android:defaultValue="911" />      
+            
+    </PreferenceCategory>
+
+
+    
+</PreferenceScreen>

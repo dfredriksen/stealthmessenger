@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MainLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AcctNameText"
+        android:textColor="@color/white"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/txtAcctName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/AcctNameText">
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PhonesText"
+        android:textColor="@color/white"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <AutoCompleteTextView
+        android:id="@+id/mtxtNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:completionThreshold="1"
+        android:textColor="@color/black"
+        android:hint="@string/LoadContacts"        
+         />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PinText"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/txtPinEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number" 
+        android:hint="@string/PinText"
+        />
+
+    <CheckBox
+        android:id="@+id/cbxRecEnc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/RecEnc" />
+
+    <CheckBox
+        android:id="@+id/cbxSendEnc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SendEnc" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/EncKeyText"
+        android:textColor="@color/white"
+        android:textAppearance="?android:attr/textAppearanceLarge" />    
+    
+    <EditText
+        android:id="@+id/txtEncKey"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" 
+        android:hint="@string/EncKeyHint"
+        />    
+    
+    <Button
+        android:id="@+id/btnAddInsert"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:text="@string/AccountBtn" />
+
+</LinearLayout>
+</ScrollView>

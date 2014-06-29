@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notepad</string>   
+    <string name="SettingsButton">Settings</string>
+    <string name="ViewButton">View</string>
+    <string name="QuitButton">Terminate Service</string>
+	<string name="AddAccount">New Account</string>
+	<string name="PhonesText">Enter phone number/contact</string>
+	<string name="PinText">Enter pin code to access this account</string>
+	<string name="AcctNameText">Name of Account</string>
+	<string name="PanicText">SSMS is Actively Protecting You</string>
+	<string name="VirusScan">Virus Scan</string>
+	<string name="Firewall">Firewall</string>
+	<string name="textmsgscan">Text Message Scan</string>
+	<string name="PanicBack">Back</string>
+	<string name="RecEnc">Receive Encrypted Messages</string>
+	<string name="SendEnc">Send Encrypted Messages</string>
+	<string name="EncKeyText">Encryption Key</string>
+	<string name="EncKeyHint">A 16 character password key- must match to send/receive encrypted messages</string>
+	<string name="AccountBtn">Add/Insert</string>
+	<string name="LoadContacts">Loading Contacts&#8230;</string>
+    <string name="no_notes">No Notes Yet</string>
+    <string name="menu_insert">Add Note</string>
+    <string name="menu_delete">Delete Note</string>
+    <string name="title">Title</string>
+    <string name="body">Body</string>
+    <string name="confirm">Confirm</string>
+    <string name="edit_note">Edit Note</string>       
+</resources>

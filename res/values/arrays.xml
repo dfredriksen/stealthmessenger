@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+	<string-array name="ssmsmenu">
+		<item name="cmDelete">Delete Message</item>
+		<item name="cmDeleteAll">Delete All Messages</item>
+		<item name="cmCopy">Copy Message Text</item>
+		<item name="cmCheck">Refresh</item>
+	</string-array>
+
+	<string-array name="acctmenu">
+		<item name="cmDelete">Delete Account</item>
+	</string-array>
+	
+	<string-array name="fontsizes">
+	    <item>Small</item>
+	    <item>Medium</item>
+	    <item>Large</item>	   
+	</string-array>
+
+	<string-array name="fontvalues">
+	    <item>1</item>
+	    <item>2</item>
+	    <item>3</item>	   
+	</string-array>	
+			
+</resources>

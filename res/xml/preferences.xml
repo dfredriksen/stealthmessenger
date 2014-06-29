@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory 
+        android:title="Accounts"
+        android:key="first_category">
+                                          
+        <com.ninjitsuware.notepad.StealthMessengerPreference
+                android:title="Modify Accounts"
+                android:summary="Add/Edit/Delete Stealth Accounts "
+                 /> 
+             
+	</PreferenceCategory>        
+    
+    <PreferenceCategory 
+        android:title="Application Settings"
+        android:key="second_category">
+
+
+        
+        <!-- <CheckBoxPreference 
+            android:key="taskbar_on"
+            android:summary="Warning: Disabling will not show if SSMS is filtering properly. Restart device to take effect"
+            android:title="Taskbar Icon" 
+            android:defaultValue="true"
+        /> -->
+
+        <EditTextPreference
+            android:key="App_Title"
+            android:title="Application Title" 
+            android:summary="Choose a custom title to disguise app"
+            android:dialogTitle="Application Title"
+            android:dialogMessage="Set your custom application title"    
+            android:defaultValue="SSMS" />                     
+        
+        <EditTextPreference
+            android:key="taskbar_text"
+            android:title="Taskbar Message" 
+            android:summary="Define the message to be shown in the taskbar area"
+            android:dialogTitle="Taskbar Message"
+            android:dialogMessage="Provide a message"    
+            android:defaultValue="SSMS is protecting your device" />
+        
+        
+        <CheckBoxPreference 
+            android:key="notify_on"
+            android:summary="New notification when receiving SSMS"
+            android:title="Enable notification" 
+            android:defaultValue="false"
+        />
+                
+        <EditTextPreference
+            android:key="SSMS_NotificationMsg"
+            android:dependency="notify_on"
+            android:title="Notification Message" 
+            android:summary="Define the message to be shown in the notification area"
+            android:dialogTitle="Notification Message"
+            android:dialogMessage="Provide a message"    
+            android:defaultValue="SSMS activity" />
+        
+        <RingtonePreference 
+            android:key="SSMSNotify_ringtone"
+            android:ringtoneType="notification"
+            android:showSilent="true"
+            android:showDefault="true"
+            android:defaultValue=""
+            android:summary="Ringtone for notification"
+            android:title="Ringtone"             
+            android:dependency="notify_on"
+            />
+
+        <CheckBoxPreference 
+            android:key="SSMSNotify_vibrate"
+            android:summary="Vibration on notification"
+            android:title="Vibrate" 
+            android:defaultValue="false"
+            android:dependency="notify_on"
+        />        
+    </PreferenceCategory>
+        
+    <PreferenceCategory 
+        android:title="Security"
+        android:key="third_category">        
+
+        <EditTextPreference
+            android:key="Settings_Password"
+            android:title="Settings Password" 
+            android:summary="Password protect this menu"
+            android:dialogTitle="Settings Password"
+            android:dialogMessage="Provide a numerical password"
+            android:inputType="number"              
+            android:defaultValue="" />
+        
+        <EditTextPreference
+            android:key="Panic_PIN"
+            android:title="Panic PIN" 
+            android:summary="False PIN to hide nature of app"
+            android:dialogTitle="Panic PIN"
+            android:dialogMessage="Provide a numerical password. Please ensure no other account shares the panic PIN or it will not function properly."
+            android:inputType="number"              
+            android:defaultValue="911" />        
+        
+    </PreferenceCategory>
+
+    <PreferenceCategory 
+        android:title="Display"
+        android:key="fourth_category">        
+        
+         <ListPreference
+           android:title="Message Font Size"
+           android:summary="Choose the font size in messages"
+           android:key="Font_Size"
+           android:defaultValue="2"
+           android:entries="@array/fontsizes"
+           android:entryValues="@array/fontvalues" />       
+        
+    </PreferenceCategory>    
+    
+
+    
+</PreferenceScreen>
